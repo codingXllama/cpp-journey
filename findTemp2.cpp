@@ -15,15 +15,17 @@ int main()
 
     double averageTemp{};
     double sumOfTemp{};
+    double sizeOfVector{0};
 
     for (auto item : myTemps)
     {
         sumOfTemp += item;
+        sizeOfVector += 1;
     }
 
     cout << "The total sum of temps is: " << sumOfTemp << endl;
     cout << " Now Computing the Average temps, please wait.." << endl;
 
-    averageTemp = sumOfTemp / myTemps.size();
+    averageTemp = sumOfTemp / sizeOfVector;
     cout << "The average temp is: " << averageTemp << " fahrenheit(s)" << endl;
 }
